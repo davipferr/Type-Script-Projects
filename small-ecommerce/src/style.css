@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
+/* FLEX */
+
+.fill-all-height {
+  height: 100vh;
+}
+
+.FCJAC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-5 {
+  gap: 5rem;
+}
+
+.ml-100 {
+  margin-left: 100px;
+}
+
+/* BUTTON */
+.text-link {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-circle {
+  background: #212121;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
