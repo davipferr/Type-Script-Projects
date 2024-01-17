@@ -86,8 +86,6 @@ const cartItems = ref<CartItem[]>([])
 
 const setCartItems = () => {
   cartItems.value  = getAddedItemsInCart()
-
-  console.log('cartItems', cartItems.value)
 }
 
 setCartItems()

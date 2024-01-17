@@ -8,6 +8,10 @@ const goToHome = () => {
   router.push({ path: "/" })
 }
 
+const goToFinishPurchase = () => {
+  router.push({ path: "/finish-purchase" })
+}
+
 type CartItem = {
   name: string
   isSelected: boolean
@@ -113,6 +117,13 @@ watch(
   }
 )
 
+watch(
+  () => selectedItemUnity.value.length,
+  () => {
+    totalItems.value = selectedItemUnity.value.length
+  }
+)
+
 const getCartItemsInStorage = () => {
   cartItems.value = JSON.parse(localStorage.getItem('cart-items') || '[]')
 }
@@ -192,11 +203,6 @@ const editedNumber = (n: number) => {
   return parseFloat(n.toFixed(2))
 }
 
-const ArrayMethodsFunc = (array: any[], name: string, method: keyof typeof Array.prototype) => {
-  const x  = array.method((obj: any) => obj.name === name)
-  console.log('x', x)
-  return x
-}
 
 getCartItemsInStorage()
 setDatabaseItems()
@@ -351,21 +357,13 @@ getTotalCost(databaseItems.value)
       <div class="d-flex justify-center align-center h-50">
         <v-btn
           class="finish-purchase-button"
+          @click="goToFinishPurchase()"
         >
           Finalizar compra
         </v-btn>
       </div>
-      <div class="d-flex justify-center align-center h-50">
-        <v-btn
-          class="finish-purchase-button"
-          @click="ArrayMethodsFunc(selectedItemUnity, 'Glorious Model O', 'find')"
-        >
-          Testar Função
-        </v-btn>
-      </div>
       </v-sheet>
     </div>
-
   </div>
 </template>
 

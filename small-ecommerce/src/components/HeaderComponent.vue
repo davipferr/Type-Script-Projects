@@ -27,7 +27,6 @@ const RedirectToCart = () => {
     </template>
     <div
       class="
-        b
         button-circle
         cursor
         mr-5
