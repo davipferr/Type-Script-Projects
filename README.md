@@ -22,7 +22,3 @@ Esse repositório foi criado com o objetivo de aprender TypeScript, tanto concei
 
 ## :bricks: This project was built with: 
 - [TypeScript](https://www.typescriptlang.org/docs/)
-
-# 📊 Stats
-
-![Alt](https://repobeats.axiom.co/api/embed/10ce83c1d8452210bc4a0b5a5df9d59bbc35d889.svg "Repobeats analytics image")
