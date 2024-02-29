@@ -2,6 +2,10 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
+// Components
+import TextFieldComponent from '@c/TextFieldComponent.vue'
+
+
 // Router
 import router from "../src/routes/index.ts"
 
@@ -15,12 +19,24 @@ import
   faCircleCheck,
   faCartShopping,
   faTrash,
+  faBarcode,
+  faCreditCard,
+  faCopy,
 } from '@fortawesome/free-solid-svg-icons'
+
+import 
+{
+  faPix,
+} from '@fortawesome/free-brands-svg-icons'
 
 library.add(
   faCircleCheck,
   faCartShopping,
   faTrash,
+  faPix,
+  faBarcode,
+  faCreditCard,
+  faCopy,
 )
 
 // Vuetify
@@ -43,6 +59,7 @@ const vuetify = createVuetify({
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
+.component('text-field-component', TextFieldComponent)
 .use(vuetify)
 .use(router)
 .mount('#app')

@@ -12,6 +12,11 @@ const routes = [
     component: () => import("@c/CartComponent.vue"),
   },
   {
+    path: "/finish-purchase",
+    name: "finish-purchase",
+    component: () => import("@c/StepsToFinishPurchase.vue")
+  },
+  {
     path: "/404",
     name: "error-page-404",
     component: () => import("@c/ErrorPage404.vue"),
